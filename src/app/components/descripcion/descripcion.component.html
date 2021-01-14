@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Capitulo n°  </h1>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">birthday</th>
+            <th scope="col">status</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cap of capitulos">
+            <th scope="row"> {{cap.char_id}}</th>
+            <td> {{cap.name}}</td>
+            <td> {{cap.birthday}}</td>
+            <td>{{cap.status}}</td>
+            <td><button class="btn btn-success" [routerLink]="['/capitulo',cap.char_id]">Ir al capitulo n°  {{cap.char_id}}</button></td>
+          </tr>
+       
+        </tbody>
+      </table>
+
+    
+    </div>
